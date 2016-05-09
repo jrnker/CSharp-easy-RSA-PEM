@@ -30,6 +30,16 @@ namespace CSharp_easy_RSA_PEM
 
             switch (assumedLength)
             {
+                case 512:
+                    this.size_Mod = 0x40;
+                    this.size_Exp = -1;
+                    this.size_D = 0x40;
+                    this.size_P = 0x20;
+                    this.size_Q = 0x20;
+                    this.size_DP = 0x20;
+                    this.size_DQ = 0x20;
+                    this.size_InvQ = 0x20;
+                    break;
                 case 1024:
                     this.size_Mod = 0x80;
                     this.size_Exp = -1;
